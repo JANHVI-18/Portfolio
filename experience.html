@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Janhvi Jaiswal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .header {
+            color: #aab7b8;
+            padding: 30px 0;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #aab7b8;
+            margin: 8px auto;
+            border-radius: 2px;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #aab7b8;
+            text-transform: uppercase;
+        }
+
+        .experience-card {
+            background: #222;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #aab7b8;
+            text-align: left;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(170, 183, 184, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 6px 14px rgba(170, 183, 184, 0.4);
+        }
+
+        .experience-card h2 {
+            color: #aab7b8;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .experience-card p {
+            color: #d9d9d9;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Link Icon Styling */
+        .link-icon {
+            text-decoration: none; /* Removes underline */
+            font-size: 22px;
+            transition: transform 0.2s ease-in-out;
+            color: inherit;
+        }
+
+        .link-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .certificate-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            text-align: center;
+            border-bottom: 3px solid #aab7b8;
+            width: 90%;
+        }
+
+        .certificate-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 14px rgba(170, 183, 184, 0.3);
+        }
+
+        .certificate-card p {
+            color: #d9d9d9;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-button {
+            display: inline-block;
+            padding: 10px 16px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            background: #aab7b8;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 3px 6px rgba(170, 183, 184, 0.3);
+        }
+
+        .certificate-button:hover {
+            background: #c0cbcb;
+            box-shadow: 0 4px 8px rgba(170, 183, 184, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        Experience
+    </header>
+
+    <!-- Internships Section -->
+    <section class="section">
+        <h2 class="section-title">💼 Internships</h2>
+    
+        <!-- LetsGrowMore Internship -->
+        <div class="experience-card">
+            <h2>💻 Java Developer Intern - LetsGrowMore  
+                <a href=https://drive.google.com/file/d/1UX8tCSkBIF82tNW2ltbEu-DherybGFYd/view?usp=sharing target="_blank" class="link-icon">🔗</a>
+            </h2>
+            <p><strong>Duration:</strong> September 2024</p>
+            <p>Developed Java-based applications | Built Currency Converter, ATM Interface, Student Grading System | Applied OOP, JavaFX, Servlets, AJAX | Focused on exception handling & performance optimization</p>
+        </div>
+    
+        <!-- CodSoft Internship -->
+        <div class="experience-card">
+            <h2>💻 Java Developer Intern - CodSoft  
+                <a href="https://drive.google.com/file/d/16yzpKzPtEjPSbbdjD2SK5n3fJWRNbtve/view?usp=sharing" target="_blank" class="link-icon">🔗</a>
+            </h2>
+            <p><strong>Duration:</strong> September 2024</p>
+            <p>Developed Banking ATM System, Number Guessing Game, Student Management System | Used Java Collections, File Handling, OOP | Improved debugging, data structures & modular programming skills</p>
+        </div>
+    
+        <!-- Apna Gorakhpur NGO Internship -->
+        <div class="experience-card">
+            <h2>🤝 Social Work Intern - Apna Gorakhpur (NGO)  
+                <a href="https://drive.google.com/file/d/1k4emIu2rEK1UVZyhkoj2Ce2UqhG_2juU/view?usp=sharing" target="_blank" class="link-icon">🔗</a>
+            </h2>
+            <p><strong>Duration:</strong> June – July 2023</p>
+            <p>Conducted education & career guidance sessions | Hosted webinars on digital literacy | Mentored students in basic coding & soft skills | Promoted inclusive learning</p>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section">
+        <h2 class="section-title">📜 Certifications</h2>
+
+        <div class="certificate-grid">
+            <div class="certificate-card">
+                <p>AWS Cloud Fundamentals - Part 1</p>
+                <a href="https://drive.google.com/file/d/1TMNsPlFmFANZnpS12FJ8v1be1YRGEBMn/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS Cloud Fundamentals - Part 2</p>
+                <a href="https://drive.google.com/file/d/1GwqXCh9Dz2-OJGOefbdKwckQJfxjAcqI/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS Cloud Architecting</p>
+                <a href="https://drive.google.com/file/d/1wmhnSm65Uc5Lis50uVpqjBo-9zD2u-M1/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS Cloud Security Foundations</p>
+                <a href="https://drive.google.com/file/d/1E3HMI6NX89j3Hp4e678XhKdf_ZBssu64/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS Cloud Practitioner Essentials</p>
+                <a href="https://drive.google.com/file/d/1N5qYjIz7Doz1dOQfRqNSl8cK2Z1pXvED/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+        
+            <div class="certificate-card">
+                <p>DevOps on AWS</p>
+                <a href="https://drive.google.com/file/d/1KcKPdqQGRpDFZuG1B67M1jZO81_vfESh/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS Configure and Deploy AWS Privatelink</p>
+                <a href="https://drive.google.com/file/d/1kJtOAm38Qiw1MelxgFI1N5XUGHGvTSoh/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <p>AWS S3-TROUBLESHOOTING</p>
+                <a href="https://drive.google.com/file/d/1F-L8tbEQQI5lgScW2UAg77HD2eQVs4cq/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
+            </div>
+        </div>
+        

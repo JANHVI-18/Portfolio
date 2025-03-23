@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janhvi's Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 50px 20px;
+            overflow-x: hidden;
+        }
+
+        .header {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        .roadmap-container {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Road SVG - shortened path */
+        .roadmap-container svg {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .location-container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            width: 220px;
+        }
+
+        .left {
+            left: 2%;
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .right {
+            right: 2%;
+            text-align: left;
+        }
+
+        .location {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #f0c674;
+        }
+
+        .project-title a {
+            color: #f0c674;
+            text-decoration: none;  /* Remove underline */
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .project-title a:hover {
+            color: #ffcc00;
+        }
+
+        /* Location placements with reduced gap between projects */
+        .location1 { top: 80px; }
+        .location2 { top: 180px; }
+        .location3 { top: 280px; }
+        .location4 { top: 380px; }
+        .location5 { top: 480px; }
+        .location6 { top: 580px; }
+        .location7 { top: 680px; }
+
+        /* Adding smooth transitions */
+        .location-container {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .location-container:hover {
+            transform: translateX(10px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        🚀 Projects
+    </header>
+
+    <div class="roadmap-container">
+        
+        <!-- Shortened Road SVG -->
+        <svg width="80%" height="600" viewBox="0 0 600 570">
+            <!-- Left Border -->
+            <path d="M250 0 Q400 150 250 300 T250 600 T250 800" 
+                stroke="#ffffff" stroke-width="6" fill="transparent"/>
+            
+            <!-- Right Border -->
+            <path d="M350 0 Q500 150 350 300 T350 600 T350 800" 
+                stroke="#ffffff" stroke-width="6" fill="transparent"/>
+            
+            <!-- Dashed Center Line -->
+            <path d="M300 0 Q450 150 300 300 T300 600 T300 800" 
+                stroke="#f0c674" stroke-width="4" fill="transparent" stroke-dasharray="20,15"/>
+        </svg>
+
+        <!-- Project Locations & Links -->
+        <div class="location-container left location1">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/Fast_API" target="_blank">Fast_API</a></span>
+        </div>
+
+        <div class="location-container right location2">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/CodSoft" target="_blank">CodSoft</a></span>
+        </div>
+
+        <div class="location-container left location3">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/DEVOPS" target="_blank">Subversion and Mercurial</a></span>
+        </div>
+
+        <div class="location-container right location4">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/yourusername/LetsGrowMore" target="_blank">Let's Grow More</a></span>
+        </div>
+
+        <div class="location-container left location5">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/DOCKER" target="_blank">Docker Projects</a></span>
+        </div>
+
+        <div class="location-container right location6">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/Sanjeevani-Aashray" target="_blank">Sanjeevani-Aashray</a></span>
+        </div>
+
+        <div class="location-container left location7">
+            <span class="location">📍</span>
+            <span class="project-title"><a href="https://github.com/JANHVI-18/TESTAUTOMATION_DEVOPS_500102094" target="_blank">Test Automation</a></span>
+        </div>
+
+    </div>
+
+</body>
+</html>

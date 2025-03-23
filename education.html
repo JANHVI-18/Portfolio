@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Janhvi Jaiswal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            width: 100%;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+
+        /* EDUCATION Heading with Matching Underline */
+        .header {
+            font-size: 42px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #aab7b8;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .header::after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #aab7b8;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .education-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .education-card {
+            background: #222;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(170, 183, 184, 0.3);
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(170, 183, 184, 0.5);
+        }
+
+        .education-card h2 {
+            color: #aab7b8;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            color: #ddd;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        strong {
+            color: #c0cbcb;
+            font-weight: 600;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        EDUCATION
+    </header>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="education-card">
+            <h2>🎓 University of Petroleum and Energy Studies (UPES), Dehradun</h2>
+            <p><strong>Degree:</strong> B.Tech in Computer Science & Engineering</p>
+            <p><strong>Specialization:</strong> Cloud Computing & Virtualization</p>
+            <p><strong>Duration:</strong> August 2022 – June 2026</p>
+            <p><strong>CGPA:</strong> 8.29/10</p>
+        </div>
+
+        <div class="education-card">
+            <h2>🏫 City Montessori School, India</h2>
+            <p><strong>Qualification:</strong> Indian School Certificate (Class 12)</p>
+            <p><strong>Duration:</strong> March 2019 – May 2020</p>
+            <p><strong>Percentage:</strong> 91.75%</p>
+        </div>
+
+        <div class="education-card">
+            <h2>🏫 City Montessori School, India</h2>
+            <p><strong>Qualification:</strong> Indian Certificate of Secondary Education (Class 10)</p>
+            <p><strong>Duration:</strong> March 2017 – June 2018</p>
+            <p><strong>Percentage:</strong> 91.60%</p>
+        </div>
+    </section>
+
+</body>
+</html>

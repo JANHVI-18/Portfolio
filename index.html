@@ -4,102 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janhvi Jaiswal - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling for the "Read More" button */
+        .read-more {
+            color: #9baaba;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 5px;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .read-more:hover {
+            color: #9babba;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Janhvi Jaiswal</h1>
-        <p>India | <a href="mailto:janhvij020@gmail.com">janhvij020@gmail.com</a> | 📞 +91 8052197109</p>
-        <p>
-            <a href="https://github.com/JANHVI-18" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/janhvi-jaiswal-9a8476256/" target="_blank">LinkedIn</a>
-        </p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h2><span class="highlight">JANHVI JAISWAL</span></h2>
+            <p>3rd Year BTech CSE Student at UPES | Cloud Computing & Virtualization Enthusiast | Java & C Programmer | Public Relations Core Committee Member at Cyber Sentinel</p>
+        </div>
+        <div class="hero-image">
+            <img src="PROFILE PIC.jpg" alt="Janhvi Jaiswal" loading="lazy">
+        </div>
     </header>
 
-    <!-- Education Section -->
-    <section>
-        <h2>🎓 Education</h2>
-        <ul>
-            <li><strong>UPES, Dehradun (2022 - 2026)</strong> | B.Tech in CSE (Cloud Computing & Virtualization) | CGPA: 8.23/10</li>
-            <li><strong>City Montessori School (2020)</strong> | Class 12 | 91.75%</li>
-            <li><strong>City Montessori School (2018)</strong> | Class 10 | 91.6%</li>
-        </ul>
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2 class="about-heading">ABOUT</h2>
+        <div class="about-content">
+            <p>
+                As a 3rd-year Computer Science Engineering student at UPES, specializing in Java, C, cloud computing, and virtualization. Proficient in AWS, Linux, and web development, I tackle technical challenges with a versatile approach. As a Public Relations Core Committee Member at Cyber Sentinel UPES, I enhance my leadership and communication skills while contributing to the tech community. Passionate about innovation and problem-solving, I am eager to create impactful solutions.
+                <a href="about.html" class="read-more">Read More</a>
+            </p>
+        </div>
     </section>
 
-    <!-- Internship Section -->
-    <section>
-        <h2>💼 Internships</h2>
-        <ul>
-            <li><strong>Java Developer Intern – LetsGrowMore (Sep 2024)</strong></li>
-            <li><strong>Java Developer Intern – CodSoft (Sep 2024)</strong></li>
-            <li><strong>Social Work Intern – Apna Gorakhpur NGO (June - July 2023)</strong></li>
-        </ul>
+    <!-- Circular Navigation Section -->
+    <section class="navigation-section">
+        <div class="circle-wrapper">
+            <a href="#" class="circle-btn large" onclick="openAndDownloadResume(event);">
+                Resume
+            </a>
+        </div>
+   
+        <div class="circle-wrapper">
+            <a href="education.html" class="circle-btn small">Education</a>
+        </div>
+        
+        <div class="circle-wrapper">
+            <a href="experience.html" class="circle-btn large">Experience</a>
+        </div>
+        <div class="circle-wrapper">
+            <a href="projects.html" class="circle-btn small">Projects</a>
+        </div>
+        <div class="circle-wrapper">
+            <a href="contact.html" class="circle-btn large">Contact</a>
+        </div>
     </section>
 
-    <!-- Projects Section -->
-    <section>
-        <h2>🚀 Projects</h2>
-        <ul>
-            <li><strong>Sanjeevani Aashray</strong> - Real-time hospital resource availability platform.</li>
-            <li><strong>E-Learning Site</strong> - Online education platform deployed on AWS.</li>
-            <li><strong>Cloud Project</strong> - Three-tier architecture deployment on AWS.</li>
-            <li><strong>WebTech Portfolio Hub</strong> - Interactive web technology course platform.</li>
-        </ul>
-    </section>
+    <script>
+        function openAndDownloadResume(event) {
+            event.preventDefault(); // Prevent default link behavior
+            
+            // Open the resume in a new tab
+            window.open('https://drive.google.com/file/d/1lAcoNjRZhiNGLMlfEKo5--CD9qmuCqto/view?usp=drive_link', '_blank');
+            
+            // Force download by modifying the link to the direct download URL
+            const downloadUrl = 'https://drive.google.com/uc?export=download&id=1lAcoNjRZhiNGLMlfEKo5--CD9qmuCqto';
+            const a = document.createElement('a');
+            a.href = downloadUrl;
+            a.setAttribute('download', 'Janhvi_Jaiswal_Resume.pdf'); // Explicitly set the download filename
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>🛠️ Technical Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>C</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Angular</li>
-            <li>JSP</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>AWS</li>
-            <li>Git & GitHub</li>
-            <li>Linux</li>
-        </ul>
-    </section>
-
-    <!-- Certifications Section -->
-    <section>
-        <h2>📜 Technical Certifications</h2>
-        <ul>
-            <li>AWS Cloud Architecting Certificate</li>
-            <li>AWS Academy Introduction to Cloud (Sem 1 & 2)</li>
-            <li>AWS Academy Cloud Security Foundations</li>
-        </ul>
-    </section>
-
-    <!-- Position of Responsibility Section -->
-    <section>
-        <h2>📢 Leadership & Responsibilities</h2>
-        <p>Public Relations Core Member – Cyber Sentinel UPES (2022 - 2023)</p>
-        <ul>
-            <li>Organized cybersecurity speaker sessions.</li>
-            <li>Conducted cybersecurity exams and gaming events.</li>
-        </ul>
-    </section>
-
-    <!-- Accomplishments Section -->
-    <section>
-        <h2>🏆 Accomplishments</h2>
-        <ul>
-            <li>Finalist – CSI Hackathon 7.0 (2022)</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Janhvi Jaiswal | Portfolio</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

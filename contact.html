@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Janhvi Jaiswal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000; /* Full black background */
+            color: #aab7b8; /* Grey text */
+            text-align: center;
+            width: 100%;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-box h1 {
+            font-size: 28px;
+            color: #aab7b8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .contact-box p {
+            font-size: 16px;
+            color: #aab7b8;
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .social-links a {
+            font-size: 26px;
+            color: #aab7b8;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #1dbfaf;
+            transform: scale(1.2);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #1dbfaf;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background: #18a39b;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-box">
+            <h1>Get in Touch</h1>
+            <p>Connect with me through the details below.</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="mailto:janhvij020@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/JANHVI-18" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/janhvi-jaiswal-9a8476256" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/janhvijaiswal_01" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Back Button -->
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
