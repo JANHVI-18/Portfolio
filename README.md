@@ -39,7 +39,13 @@ Hi, I’m Janhvi! I’m a **Computer Science & Engineering** student at **UPES D
 ## 🏅 Certifications  
 - **AWS Cloud Architecting**  
 - **AWS Academy Cloud Security Foundations**  
-- **DevOps on AWS**  
+- **DevOps on AWS**
+-  **AWS Academy Introduction to Cloud (Semester 1 & 2)**  
+- **AWS S3 Troubleshooting**
+- **AWS Cloud Practitioner Essentials**  
+- **AWS Configure and Deploy AWS PrivateLink**
+ 
+
 
 ---
 
