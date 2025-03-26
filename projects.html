@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janhvi's Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
     
     <style>
         * {
@@ -15,11 +16,10 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #111;
-            color: #e0e0e0;
+            background-color: #1e1e1e;
+            color: #f1f1f1;
             text-align: center;
             padding: 50px 20px;
-            overflow-x: hidden;
         }
 
         .header {
@@ -29,138 +29,170 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 40px;
-            padding-bottom: 10px;
         }
 
-        .roadmap-container {
-            position: relative;
-            max-width: 900px;
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
             margin: auto;
         }
 
-        /* Road SVG - shortened path */
-        .roadmap-container svg {
+        @media (max-width: 992px) {
+            .projects-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .projects-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .project-card {
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-img {
             width: 100%;
-            height: auto;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            transition: filter 0.3s ease-in-out;
         }
 
-        .location-container {
-            position: absolute;
-            display: flex;
-            align-items: center;
+        .project-card:hover .project-img {
+            filter: brightness(0.5); /* Darken image on hover */
+        }
+
+        .project-title {
+            padding: 10px;
             font-size: 18px;
-            width: 220px;
-        }
-
-        .left {
-            left: 2%;
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-
-        .right {
-            right: 2%;
-            text-align: left;
-        }
-
-        .location {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #f0c674;
-        }
-
-        .project-title a {
-            color: #f0c674;
-            text-decoration: none;  /* Remove underline */
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .project-title a:hover {
-            color: #ffcc00;
-        }
-
-        /* Location placements with reduced gap between projects */
-        .location1 { top: 80px; }
-        .location2 { top: 180px; }
-        .location3 { top: 280px; }
-        .location4 { top: 380px; }
-        .location5 { top: 480px; }
-        .location6 { top: 580px; }
-        .location7 { top: 680px; }
-
-        /* Adding smooth transitions */
-        .location-container {
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: all 0.3s ease-in-out;
         }
 
-        .location-container:hover {
-            transform: translateX(10px);
+        .project-title:hover {
+            color: #747874;
+            transform: translateY(-5px);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(125, 127, 125, 0.8);
         }
 
+        .project-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .project-title a:hover {
+            color: #575e58;
+        }
+
+        /* View Icon - Hidden by default, appears on hover */
+        .view-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-card:hover .view-icon {
+            opacity: 1; /* Show view icon on hover */
+        }
     </style>
 </head>
 <body>
 
     <header class="header">
-        🚀 Projects
+         My Projects
     </header>
 
-    <div class="roadmap-container">
+    <div class="projects-container">
+        <div class="project-card">
+            <a href="docker_projects.html">
+                <img src="images/Docker.png" class="project-img" alt="Docker">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="docker_projects.html">Docker Projects</a>
+            </div>
+        </div>
         
-        <!-- Shortened Road SVG -->
-        <svg width="80%" height="600" viewBox="0 0 600 570">
-            <!-- Left Border -->
-            <path d="M250 0 Q400 150 250 300 T250 600 T250 800" 
-                stroke="#ffffff" stroke-width="6" fill="transparent"/>
-            
-            <!-- Right Border -->
-            <path d="M350 0 Q500 150 350 300 T350 600 T350 800" 
-                stroke="#ffffff" stroke-width="6" fill="transparent"/>
-            
-            <!-- Dashed Center Line -->
-            <path d="M300 0 Q450 150 300 300 T300 600 T300 800" 
-                stroke="#f0c674" stroke-width="4" fill="transparent" stroke-dasharray="20,15"/>
-        </svg>
-
-        <!-- Project Locations & Links -->
-        <div class="location-container left location1">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/Fast_API" target="_blank">Fast_API</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/Fast_API" target="_blank">
+                <img src="images/Fast_API.png" class="project-img" alt="FastAPI">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/Fast_API" target="_blank">Fast_API</a>
+            </div>
         </div>
 
-        <div class="location-container right location2">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/CodSoft" target="_blank">CodSoft</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/CodSoft" target="_blank">
+                <img src="images/CodeSoft.png" class="project-img" alt="CodSoft">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/CodSoft" target="_blank">CodSoft</a>
+            </div>
         </div>
 
-        <div class="location-container left location3">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/DEVOPS" target="_blank">Subversion and Mercurial</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/DEVOPS" target="_blank">
+                <img src="images/svn.png" class="project-img" alt="DevOps">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/DEVOPS" target="_blank">Subversion & Mercurial</a>
+            </div>
         </div>
 
-        <div class="location-container right location4">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/yourusername/LetsGrowMore" target="_blank">Let's Grow More</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/LetsGrowMore" target="_blank">
+                <img src="images/Lets_grow_more.png" class="project-img" alt="LetsGrowMore">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/LetsGrowMore" target="_blank">Let's Grow More</a>
+            </div>
         </div>
 
-        <div class="location-container left location5">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/DOCKER" target="_blank">Docker Projects</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/Sanjeevani-Aashray" target="_blank">
+                <img src="images/sanjeevani aashray.png" class="project-img" alt="Sanjeevani-Aashray">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/Sanjeevani-Aashray" target="_blank">Sanjeevani-Aashray</a>
+            </div>
         </div>
 
-        <div class="location-container right location6">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/Sanjeevani-Aashray" target="_blank">Sanjeevani-Aashray</a></span>
-        </div>
-
-        <div class="location-container left location7">
-            <span class="location">📍</span>
-            <span class="project-title"><a href="https://github.com/JANHVI-18/TESTAUTOMATION_DEVOPS_500102094" target="_blank">Test Automation</a></span>
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/TESTAUTOMATION_DEVOPS_500102094" target="_blank">
+                <img src="images/test_automation.png" class="project-img" alt="Test Automation">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">
+                <a href="https://github.com/JANHVI-18/TESTAUTOMATION_DEVOPS_500102094" target="_blank">Test Automation</a>
+            </div>
         </div>
 
     </div>

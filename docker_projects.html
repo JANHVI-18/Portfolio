@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .project-card:hover .project-img {
+            filter: brightness(0.4);
+        }
+
+        .project-title {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: #575e58;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #3e4341;
+        }
+
+        /* Centered View Icon - Hidden by default, appears on hover */
+        .view-icon {
+            position: absolute;
+            top: 45%; /* Adjusted to shift the icon slightly up */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .project-card:hover .view-icon {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .projects-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        🐳 Docker Projects
+    </header>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <a href="https://github.com/JANHVI-18/DOCKER" target="_blank">
+                <img src="images/docker_pool.png" class="project-img" alt="Docker_pool">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">Docker Pool</div>
+            <div class="buttons">
+                <a href="https://github.com/JANHVI-18/DOCKER" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <a href="https://project-appdashboard-nzxanxxdwwpzewudewe87u.streamlit.app/" target="_blank">
+                <img src="images/Streamlit_Dashboard.png" class="project-img" alt="Streamlit">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">Streamlit Dashboard</div>
+            <div class="buttons">
+                <a href="https://project-appdashboard-nzxanxxdwwpzewudewe87u.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/JANHVI-18/Project-Streamlit_Dashboard" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <a href="https://project-titanic-yphgu5az4ryc43bhdotbsl.streamlit.app/" target="_blank">
+                <img src="images/Titanic.png" class="project-img" alt="Titanic">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">Titanic Survival Prediction</div>
+            <div class="buttons">
+                <a href="https://project-titanic-yphgu5az4ryc43bhdotbsl.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/JANHVI-18/Project-Titanic" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <a href="https://binary-classification-webpage-6zgoztdy9mrfcyqdyupqqu.streamlit.app/" target="_blank">
+                <img src="images/Binary_Classification.png" class="project-img" alt="Binary_Classification">
+                <div class="view-icon"><i class="fas fa-eye"></i></div>
+            </a>
+            <div class="project-title">Binary Classification Web App</div>
+            <div class="buttons">
+                <a href="https://binary-classification-webpage-6zgoztdy9mrfcyqdyupqqu.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/JANHVI-18/Binary-Classification-Webpage/tree/main" target="_blank" class="btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
