@@ -41,6 +41,60 @@
                 display: none;
             }
         }
+
+        /* Responsive Design Tweaks */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .hero-text, .hero-image {
+                flex: 1 1 100%;
+                padding: 10px;
+            }
+
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .circle-wrapper {
+                margin-bottom: 20px;
+            }
+
+            .circle-btn {
+                width: 100px !important;
+                height: 100px !important;
+                font-size: 14px !important;
+            }
+
+            .social-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle-btn {
+                width: 90px !important;
+                height: 90px !important;
+                font-size: 13px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -68,8 +122,7 @@
     <section class="navigation-section">
         <div class="circle-wrapper">
             <a href="about.html" class="circle-btn large">About</a>
-
-        </div> 
+        </div>
 
         <div class="circle-wrapper">
             <a href="education.html" class="circle-btn small">Education</a>

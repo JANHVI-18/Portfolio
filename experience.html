@@ -92,9 +92,8 @@
             line-height: 1.5;
         }
 
-        /* Link Icon Styling */
         .link-icon {
-            text-decoration: none; /* Removes underline */
+            text-decoration: none;
             font-size: 22px;
             transition: transform 0.2s ease-in-out;
             color: inherit;
@@ -152,6 +151,53 @@
             box-shadow: 0 4px 8px rgba(170, 183, 184, 0.5);
         }
 
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .header {
+                font-size: 30px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .experience-card {
+                padding: 20px;
+            }
+
+            .certificate-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .certificate-button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .experience-card {
+                padding: 15px;
+            }
+
+            .certificate-card {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .certificate-button {
+                font-size: 13px;
+                padding: 6px 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -168,7 +214,7 @@
         <!-- LetsGrowMore Internship -->
         <div class="experience-card">
             <h2>💻 Java Developer Intern - LetsGrowMore  
-                <a href=https://drive.google.com/file/d/1UX8tCSkBIF82tNW2ltbEu-DherybGFYd/view?usp=sharing target="_blank" class="link-icon">🔗</a>
+                <a href="https://drive.google.com/file/d/1UX8tCSkBIF82tNW2ltbEu-DherybGFYd/view?usp=sharing" target="_blank" class="link-icon">🔗</a>
             </h2>
             <p><strong>Duration:</strong> September 2024</p>
             <p>Developed Java-based applications | Built Currency Converter, ATM Interface, Student Grading System | Applied OOP, JavaFX, Servlets, AJAX | Focused on exception handling & performance optimization</p>
@@ -238,4 +284,7 @@
                 <a href="https://drive.google.com/file/d/1F-L8tbEQQI5lgScW2UAg77HD2eQVs4cq/view?usp=drive_link" target="_blank" class="certificate-button">📄 View Certificate</a>
             </div>
         </div>
-        
+    </section>
+
+</body>
+</html>

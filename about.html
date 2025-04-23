@@ -17,6 +17,7 @@
 
         .container {
             display: flex;
+            flex-wrap: wrap;
             max-width: 1200px;
             margin: auto;
             padding: 50px 20px;
@@ -28,6 +29,7 @@
             background: #1e1e1e;
             padding: 40px;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .profile-section img {
@@ -91,6 +93,7 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .info-box div {
@@ -107,6 +110,56 @@
             font-size: 18px;
             margin-bottom: 10px;
             text-align: left;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .profile-section, .details-section {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+
+            .profile-section img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-section h2 {
+                font-size: 18px;
+            }
+
+            .details-section h1 {
+                font-size: 28px;
+            }
+
+            .info-box div {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-section img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .profile-section h2 {
+                font-size: 16px;
+            }
+
+            .details-section h1 {
+                font-size: 24px;
+            }
+
+            .info-box div {
+                padding: 10px;
+            }
+
+            .social-links a {
+                font-size: 20px;
+                margin: 0 5px;
+            }
         }
     </style>
 </head>

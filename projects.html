@@ -39,6 +39,13 @@
             margin: auto;
         }
 
+        /* Responsiveness */
+        @media (max-width: 1200px) {
+            .projects-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 992px) {
             .projects-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -116,12 +123,36 @@
         .project-card:hover .view-icon {
             opacity: 1; /* Show view icon on hover */
         }
+
+        /* Additional Styling for Mobile View */
+        @media (max-width: 480px) {
+            .header {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .project-card {
+                margin-bottom: 30px;
+            }
+
+            .project-img {
+                height: 150px;
+            }
+
+            .project-title {
+                font-size: 16px;
+            }
+
+            .view-icon {
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header class="header">
-         My Projects
+        My Projects
     </header>
 
     <div class="projects-container">
